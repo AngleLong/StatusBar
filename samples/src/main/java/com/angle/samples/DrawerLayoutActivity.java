@@ -12,7 +12,6 @@ public class DrawerLayoutActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_drawer_layout);
 
-        //设置透明的状态栏
         StatusBarUtil.setTranslucentStatus(this);
     }
 }
