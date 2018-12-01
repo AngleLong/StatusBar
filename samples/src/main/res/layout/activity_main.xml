@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/tl_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#584706">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/samples"
+            android:textColor="@android:color/white"
+            android:textSize="22sp" />
+
+    </android.support.v7.widget.Toolbar>
+
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tl_bar">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/btn_drawer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="btnDrawerLayout"
+                android:text="@string/drawablelayout"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/btn_image"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="btnImage"
+                android:text="@string/string_image"
+                app:layout_constraintTop_toBottomOf="@id/btn_drawer" />
+
+            <Button
+                android:id="@+id/btn_color"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="btnColor"
+                android:text="@string/string_color"
+                app:layout_constraintTop_toBottomOf="@id/btn_image" />
+
+            <Button
+                android:id="@+id/btn_statusColor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="btnStatusColor"
+                android:text="状态栏文字深浅的指定"
+                app:layout_constraintTop_toBottomOf="@id/btn_color" />
+        </android.support.constraint.ConstraintLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+</android.support.constraint.ConstraintLayout>

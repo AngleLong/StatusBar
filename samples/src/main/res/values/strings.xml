@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">samples</string>
+    <string name="samples">案例工程</string>
+    <string name="drawablelayout">带有DrawableLayout的布局</string>
+    <string name="string_image">顶部是图片的状态栏</string>
+    <string name="string_color">指定颜色的状态栏</string>
+    <string name="string_status_text">演示指定状态栏深浅</string>
+</resources>

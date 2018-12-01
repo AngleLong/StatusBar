@@ -118,7 +118,7 @@ public class StatusBarUtil {
      * @param isDark   状态栏文字及图标是否为深色
      * @return 是否设置成功
      */
-    public static boolean setFlymeStatusBarTextMode(Activity activity, boolean isDark) {
+    private static boolean setFlymeStatusBarTextMode(Activity activity, boolean isDark) {
         Window window = activity.getWindow();
         boolean result = false;
         if (window != null) {
@@ -154,7 +154,7 @@ public class StatusBarUtil {
      * @param isDark   状态栏文字及图标是否为深色
      * @return 是否设置成功
      */
-    public static boolean setMIUIStatusBarTextMode(Activity activity, boolean isDark) {
+    private static boolean setMIUIStatusBarTextMode(Activity activity, boolean isDark) {
         boolean result = false;
         Window window = activity.getWindow();
         if (window != null) {
