@@ -13,6 +13,6 @@ public class ColorActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_color);
 
-        StatusBarUtil.setStatusBarColor(this,Color.parseColor("#D81B60"));
+        StatusBarUtil.setStatusBarColor(this, Color.parseColor("#D81B60"));
     }
 }
