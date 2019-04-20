@@ -40,14 +40,14 @@ StatusBarUtil.setTranslucentStatus(this);
 ![顶部图片使用的效果图](https://github.com/AngleLong/StatusBar/blob/master/images/device-2018-12-01-172314.png)
 
 ```
-StatusBarUtil.setStatusBarColor(this, Color.parseColor("#D81B60"));
+StatusBarUtil.setStatusBarColor(this, "#D81B60");
 ```
 
 ![指定顶部状态栏颜色的效果图](https://github.com/AngleLong/StatusBar/blob/master/images/device-2018-12-01-172337.png)
 
 
 ```
-StatusBarUtil.setStatusBarMode(this, true, Color.parseColor("#ffffff"));
+StatusBarUtil.setStatusBarMode(this, true, "#ffffff");
 ```
 
 ![状态栏文字修改的效果图](https://github.com/AngleLong/StatusBar/blob/master/images/device-2018-12-01-172358.png)
