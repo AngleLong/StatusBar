@@ -2,10 +2,9 @@ package com.angle.samples;
 
 import android.content.Intent;
 import android.graphics.Color;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.widget.ImageView;
 
 import com.angle.statusbarlib.StatusBarUtil;
 
@@ -16,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         //设置状态栏的颜色
-        StatusBarUtil.setStatusBarColor(this, Color.parseColor("#584706"));
+        StatusBarUtil.setStatusBarColor(this, "#584706");
     }
 
     /**
@@ -48,6 +47,14 @@ public class MainActivity extends AppCompatActivity {
      */
     public void btnStatusColor(View view) {
         Intent intent = new Intent(this, StatusTextActivity.class);
+        startActivity(intent);
+    }
+
+    /**
+     * 渐变标题栏的实现
+     */
+    public void gradientStatusColor(View view) {
+        Intent intent = new Intent(this, GradientActivity.class);
         startActivity(intent);
     }
 }

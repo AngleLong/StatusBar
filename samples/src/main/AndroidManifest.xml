@@ -19,7 +19,10 @@
         <activity android:name=".DrawerLayoutActivity" />
         <activity android:name=".ImageActivity" />
         <activity android:name=".ColorActivity" />
-        <activity android:name=".StatusTextActivity"></activity>
+        <activity android:name=".StatusTextActivity" />
+        <activity
+            android:name=".GradientActivity"
+            android:theme="@style/gradient" />
     </application>
 
 </manifest>

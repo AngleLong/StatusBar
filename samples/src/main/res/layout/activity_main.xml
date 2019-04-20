@@ -65,6 +65,14 @@
                 android:onClick="btnStatusColor"
                 android:text="状态栏文字深浅的指定"
                 app:layout_constraintTop_toBottomOf="@id/btn_color" />
+
+            <Button
+                android:id="@+id/btn_gradientColor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="gradientStatusColor"
+                android:text="渐变状态栏的实现"
+                app:layout_constraintTop_toBottomOf="@id/btn_statusColor" />
         </android.support.constraint.ConstraintLayout>
 
     </android.support.v4.widget.NestedScrollView>

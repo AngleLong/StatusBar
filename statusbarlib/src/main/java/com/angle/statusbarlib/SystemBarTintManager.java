@@ -202,7 +202,7 @@ public class SystemBarTintManager {
      */
     public void setStatusBarTintResource(int res) {
         if (mStatusBarAvailable) {
-            mStatusBarTintView.setBackgroundResource(res);
+            mStatusBarTintView.setBackgroundColor(res);
         }
     }
 

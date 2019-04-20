@@ -1,8 +1,7 @@
 package com.angle.samples;
 
-import android.graphics.Color;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 
 import com.angle.statusbarlib.StatusBarUtil;
 
@@ -24,6 +23,6 @@ public class StatusTextActivity extends AppCompatActivity {
          *   android:fitsSystemWindows="true"以确保屏幕不被顶上去。
          * 3.如果对10%的蒙层不是很满意，请修改StatusBarUtil的96行处的内容
          */
-        StatusBarUtil.setStatusBarMode(this, true, Color.parseColor("#ffffff"));
+        StatusBarUtil.setStatusBarMode(this, true,"#ffffff");
     }
 }

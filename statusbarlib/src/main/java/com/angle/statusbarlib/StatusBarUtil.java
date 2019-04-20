@@ -48,18 +48,18 @@ public class StatusBarUtil {
      * @param activity 当前的Activity
      * @param colorId  颜色值ID
      */
-    public static void setStatusBarColor(Activity activity, int colorId) {
+    public static void setStatusBarColor(Activity activity, String colorId) {
         //Android6.0（API 23）以上，系统方法
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             Window window = activity.getWindow();
-            window.setStatusBarColor(colorId);
+            window.setStatusBarColor(Color.parseColor(colorId));
         } else if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
             //使用SystemBarTint库使4.4版本状态栏变色，需要先将状态栏设置为透明
             setTranslucentStatus(activity);
             //设置状态栏颜色
             SystemBarTintManager tintManager = new SystemBarTintManager(activity);
             tintManager.setStatusBarTintEnabled(true);
-            tintManager.setStatusBarTintResource(colorId);
+            tintManager.setStatusBarTintResource(Color.parseColor(colorId));
         }
     }
 
@@ -70,7 +70,7 @@ public class StatusBarUtil {
      * @param isTextDark 文字、图标是否为黑色 （false为默认的白色）
      * @param colorId    状态栏颜色
      */
-    public static void setStatusBarMode(Activity activity, boolean isTextDark, int colorId) {
+    public static void setStatusBarMode(Activity activity, boolean isTextDark, String colorId) {
 
         if (!isTextDark) {
             //文字、图标颜色不变，只修改状态栏颜色
@@ -101,14 +101,14 @@ public class StatusBarUtil {
         }
     }
 
-    private static void setDefault(Activity activity, boolean isTextDark, int colorId) {
+    private static void setDefault(Activity activity, boolean isTextDark, String colorId) {
         if (isTextDark) {
-            String s = Integer.toHexString(colorId);
-            if (s.length() == 8) {
-                s = s.substring(2, s.length());
-            }
-            setStatusBarColor(activity, Color.parseColor("#1A" + s));
+            //设置状态栏的颜色
+            int colorWithAlpha = ColorAddAlpha.getColorWithAlpha(0.5f, Color.parseColor(colorId));
+            String alphacolor = "#" + String.valueOf(Integer.toHexString(colorWithAlpha));
+            setStatusBarColor(activity, alphacolor);
         }
+
     }
 
     /**
