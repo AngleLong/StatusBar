@@ -52,6 +52,10 @@ StatusBarUtil.setStatusBarMode(this, true, "#ffffff");
 
 ![状态栏文字修改的效果图](https://github.com/AngleLong/StatusBar/blob/master/images/device-2018-12-01-172358.png)
 
+4.说明一点：
+如果页面没有沉浸到状态里面的时候(例如指定颜色等)，需要在主题中添加**<item name="android:fitsSystemWindows">true</item>**
+如果页面有沉浸到状态栏内部(例如顶部图片的沉浸)，就不需要添加**<item name="android:fitsSystemWindows">true</item>**
+
 关于修改状态栏文字颜色这里说明一些问题：
 1. 因为在4.0~6.0的部分手机是无法修改状态栏文字的颜色的，所以这里我是在你传入的相应颜色上添加了10%的透明度；
 2. 一般只有在状态栏比较浅（接近于白色的时候才会把状态栏的文字修改成深色）；
